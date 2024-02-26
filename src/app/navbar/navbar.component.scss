@@ -1,0 +1,33 @@
+.navLink {
+  text-decoration: none;
+  position: relative;
+  span,
+  i {
+    color: rgb(97, 97, 97);
+    transition: all 0.5s;
+  }
+}
+
+.navLink::after {
+  margin: 10px auto;
+  left: -10px;
+  right: 0;
+  width: 65%;
+
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navLink:hover:after,
+.navLink:focus:after,
+.navLink:active:after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  bottom: -26px;
+  background: #023974e1;
+}
